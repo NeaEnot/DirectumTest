@@ -14,15 +14,9 @@ namespace DirectumTest.CoreEntities
         private BaseStation baseStation;
         private NetworkMediator network;
 
-        public Phone(NetworkMediator network)
+        public Phone(ulong imei, NetworkMediator network)
         {
             contacts = new Dictionary<string, ulong>();
-
-            Random random = new Random();
-
-            ulong imei = 0;
-            for (int i = 0; i < 16; i++)
-                imei += (ulong)random.Next(1, 10);
 
             IMEI = imei;
             this.network = network;

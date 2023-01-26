@@ -4,7 +4,7 @@ namespace DirectumTest.CoreEntities
 {
     internal class Phone3g : Phone
     {
-        public Phone3g(NetworkMediator network) : base(network)
+        public Phone3g(ulong imei, NetworkMediator network) : base(imei, network)
         { }
     }
 }
